@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const res = await fetch("https://courier-plattform-server.pxxl.click/api/user/me", {
+                const res = await fetch("https://courier-plattform.onrender.com/api/user/me", {
                     credentials: "include",
                 });
 
@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
     const refreshUser = async () => {
         try {
-          const res = await fetch("https://courier-plattform-server.pxxl.click/api/user/me", {
+          const res = await fetch("https://courier-plattform.onrender.com/api/user/me", {
             credentials: "include",
           });
       

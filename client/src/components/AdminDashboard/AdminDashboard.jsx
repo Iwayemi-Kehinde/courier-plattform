@@ -15,7 +15,7 @@ const AdminDashboard = () => {
 
     const fetchPricing = async () => {
         setLoading(true)
-        const res = await fetch("https://courier-plattform-server.pxxl.click/api/pricing");
+        const res = await fetch("https://courier-plattform.onrender.com/api/pricing");
         const data = await res.json();
         setPrice(data.pricePerPound);
         setLoading(false)
@@ -23,7 +23,7 @@ const AdminDashboard = () => {
 
     const fetchUsers = async () => {
         setLoading(true)
-        const res = await fetch("https://courier-plattform-server.pxxl.click/api/user", {
+        const res = await fetch("https://courier-plattform.onrender.com/api/user", {
             credentials: "include",
         });
 
@@ -35,7 +35,7 @@ const AdminDashboard = () => {
     const updatePrice = async () => {
         try {
             setLoading(true)
-            const res = await fetch("https://courier-plattform-server.pxxl.click/api/pricing", {
+            const res = await fetch("https://courier-plattform.onrender.com/api/pricing", {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",
@@ -53,7 +53,7 @@ const AdminDashboard = () => {
     const makeAdmin = async (id) => {
         try {
             setLoading(true)
-            const res = await fetch(`https://courier-plattform-server.pxxl.click/api/user/make-admin/${id}`, {
+            const res = await fetch(`https://courier-plattform.onrender.com/api/user/make-admin/${id}`, {
                 method: "PUT",
                 credentials: "include",
             });
@@ -71,7 +71,7 @@ const AdminDashboard = () => {
     const removeAdmin = async (id) => {
         try {
             setLoading(true)
-            const res = await fetch(`https://courier-plattform-server.pxxl.click/api/user/remove-admin/${id}`, {
+            const res = await fetch(`https://courier-plattform.onrender.com/api/user/remove-admin/${id}`, {
                 method: "PUT",
                 credentials: "include",
             });

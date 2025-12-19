@@ -29,7 +29,7 @@ const Auth = () => {
 
     try {
       const res = await fetch(
-        isSignup ? "https://courier-plattform-server.pxxl.click/api/auth/register" : "https://courier-plattform-server.pxxl.click/api/auth/login",
+        isSignup ? "https://courier-plattform.onrender.com/api/auth/register" : "https://courier-plattform.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
