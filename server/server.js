@@ -20,6 +20,8 @@ app.use("/api/user", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/pricing", pricingRoutes);
 
+app.set("trust proxy", 1)
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {

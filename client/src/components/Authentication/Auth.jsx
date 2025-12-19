@@ -9,7 +9,7 @@ const Auth = () => {
   const [isSignup, setIsSignup] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { refreshUser } = useAuth()
+  const { refreshUser, setUser } = useAuth()
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -44,24 +44,26 @@ const Auth = () => {
         throw new Error(data.message || "Something went wrong");
       }
 
+      setUser(data)
+
+
       toast.success(
         isSignup ? "Account created successfully!" : "Welcome back!"
       );
 
-      if (data.role === "admin") {
+      if (data.role == "admin") {
         toast.success("You are logged in as an admin");
-    }
+      }
 
-    refreshUser()
+      navigate("/user-dashboard")
 
-      navigate("/user-dashboard");
     } catch (err) {
       toast.error(err.message);
     } finally {
       setLoading(false);
     }
   };
-if(loading) return <Loader />
+  if (loading) return <Loader />
   return (
     <section className="auth">
       <div className="auth-card">
@@ -98,8 +100,8 @@ if(loading) return <Loader />
             {loading
               ? "Please wait..."
               : isSignup
-              ? "Create Account"
-              : "Login"}
+                ? "Create Account"
+                : "Login"}
           </button>
         </form>
 

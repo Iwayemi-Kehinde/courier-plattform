@@ -23,9 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/auth" element={
-        <ProtectedRouteAuth>
         <AuthPage />
-        </ProtectedRouteAuth>
         
         } />
         <Route path="/user-dashboard" element={
