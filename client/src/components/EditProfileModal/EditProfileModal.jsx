@@ -19,7 +19,7 @@ const EditProfileModal = ({ user, onClose, onUpdated }) => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/user/update-profile", {
+      const res = await fetch("https://courier-plattform-server.pxxl.click/api/user/update-profile", {
         method: "PUT",
         credentials: "include",
         headers: {

@@ -21,7 +21,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userRes = await fetch("http://localhost:5000/api/user/me", {
+        const userRes = await fetch("https://courier-plattform-server.pxxl.click/api/user/me", {
           credentials: "include",
         });
 
@@ -31,7 +31,7 @@ const Dashboard = () => {
 
         const userData = await userRes.json();
 
-        const priceRes = await fetch("http://localhost:5000/api/pricing");
+        const priceRes = await fetch("https://courier-plattform-server.pxxl.click/api/pricing");
         const priceData = await priceRes.json();
 
         setProfile(userData);
@@ -58,7 +58,7 @@ const Dashboard = () => {
   };
 
   const logout = async () => {
-    await fetch("http://localhost:5000/api/auth/logout", {
+    await fetch("https://courier-plattform-server.pxxl.click/api/auth/logout", {
       method: "POST",
       credentials: "include",
     });
