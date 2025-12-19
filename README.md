@@ -55,12 +55,17 @@ Future updates will include:
 - **Tools:** Postman for API testing  
 
 ---
+### Important Notice
+- To gain access to admin page... Use the following credentials to login
+- **email:** admin@admin.com
+- **password:** admin
+---
 
 ### How to Run Locally
 
 1. **Create a `.env` file** in the root of the server folder and add the following keys:
 - MONGO_URI=<your-mongo-db-uri>
-- NODE_ENV=development
+- NODE_ENV=bla-bla-bla
 - JWT_SECRET=<your-jwt-secret>
 
 

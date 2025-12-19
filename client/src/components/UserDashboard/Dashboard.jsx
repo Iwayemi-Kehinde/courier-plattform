@@ -141,7 +141,7 @@ const Dashboard = () => {
         </div>
 
         {/* ADMIN ACCESS */}
-        {user?.role === "admin" && (
+        {profile?.role === "admin" && (
           <div className="admin-access">
             <p>You have admin privileges</p>
             <Link to="/admin">

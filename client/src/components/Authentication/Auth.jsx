@@ -46,7 +46,6 @@ const Auth = () => {
 
       setUser(data)
 
-
       toast.success(
         isSignup ? "Account created successfully!" : "Welcome back!"
       );
@@ -56,6 +55,7 @@ const Auth = () => {
       }
 
       navigate("/user-dashboard")
+      window.location.reload()
 
     } catch (err) {
       toast.error(err.message);

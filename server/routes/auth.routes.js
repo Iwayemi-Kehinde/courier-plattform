@@ -10,7 +10,6 @@ router.post("/logout", protect, (req, res) => {
     res.cookie("token", "", {
       httpOnly: true,
     });
-  
     res.json({ message: "Logged out successfully" });
   });
 
