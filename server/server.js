@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: ["http://localhost:5173", "https://courier-plattform-server.pxxl.click"],
+  origin: ["http://localhost:5173", "https://courier-plattform.pxxl.click"],
   credentials: true
 }))
 app.use("/api/user", userRoutes);
