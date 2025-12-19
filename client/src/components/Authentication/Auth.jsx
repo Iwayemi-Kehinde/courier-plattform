@@ -37,7 +37,6 @@ const Auth = () => {
           body: JSON.stringify(formData),
         }
       );
-      refreshUser()
 
       const data = await res.json();
 
@@ -52,6 +51,9 @@ const Auth = () => {
       if (data.role === "admin") {
         toast.success("You are logged in as an admin");
     }
+
+    refreshUser()
+
       navigate("/user-dashboard");
     } catch (err) {
       toast.error(err.message);
