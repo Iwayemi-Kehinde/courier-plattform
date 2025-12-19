@@ -1,0 +1,29 @@
+import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import cors from "cors"
+import cookieParser from "cookie-parser";
+import authRoutes from "./routes/auth.routes.js";
+import userRoutes from "./routes/user.routes.js";
+import pricingRoutes from "./routes/pricing.routes.js";
+
+dotenv.config();
+
+const app = express();
+app.use(express.json());
+app.use(cookieParser());
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}))
+app.use("/api/user", userRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/pricing", pricingRoutes);
+
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("MongoDB connected");
+    app.listen(5000, () => console.log("Server running on port 5000"));
+  })
+  .catch((err) => console.log(err));

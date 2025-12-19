@@ -1,0 +1,308 @@
+.hero {
+    height: calc(100vh - 70px);
+    background-image: url("../../assets/images/hero.jpg"); /* put image in public folder */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+    color: #fff;
+    max-width: 700px;
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .hero-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgb(211, 6, 6);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .hero-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  }
+  
+
+/* TRUST CARD */
+.trust {
+    padding: 60px 20px;
+    background-color: #f3f3f3;
+  }
+  
+  .trust-card {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+
+  .trust-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  /* Text */
+  .trust-text {
+    flex: 1;
+  }
+  
+  .trust-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  .trust-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .trust-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: rgb(211, 6, 6);
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .trust-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Image */
+  .trust-image {
+    flex: 1;
+  }
+  .trust .trust-image img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .trust-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .trust-text h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* STATS BAR */
+.stats {
+    background-color: rgb(211, 6, 6);
+    padding: 50px 20px;
+    /* margin-bottom: 80px; */
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  
+  .stats-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  /* Each Stat */
+  .stat-item {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .stat-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .stat-item p {
+    font-size: 1rem;
+    opacity: 0.95;
+  }
+  /* IMAGE-ADJACENT CARDS */
+.trust-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  /* Reverse text and image on alternate cards if you want */
+  .trust-card:nth-child(even) .trust-container {
+    flex-direction: row-reverse;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .trust-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .trust-text h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .stats-container {
+      flex-direction: column;
+    }
+  
+    .stat-item {
+      margin-bottom: 25px;
+    }
+  }
+  
+  @media (max-width: 768px) {   
+    .stat-divider {
+      width: 60px;
+      height: 1px;
+    }
+  }
+  
+
+  /* TRUST CARD RESPONSIVE IMPROVEMENTS */
+
+@media (max-width: 1024px) {
+    .trust-card {
+      padding: 40px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .trust-container {
+      flex-direction: column;
+      gap: 35px;
+    }
+  
+    .trust-text {
+      text-align: center;
+    }
+  
+    .trust-btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .trust {
+      padding: 40px 15px;
+    }
+  
+    .trust-card {
+      padding: 30px 20px;
+      border-radius: 12px;
+    }
+  
+    .trust-text h2 {
+      font-size: 1.6rem;
+    }
+  
+    .trust-text p {
+      font-size: 0.95rem;
+    }
+  
+    .trust-image img {
+      border-radius: 10px;
+    }
+  
+    .trust-btn {
+      width: 100%;
+      max-width: 260px;
+    }
+  }
+
+  
+
+  /* STATS BAR RESPONSIVE REFINEMENT */
+
+@media (max-width: 900px) {
+    .stats-container {
+      flex-direction: column;
+      gap: 25px;
+    }
+  
+    .stat-item h3 {
+      font-size: 2rem;
+    }
+  
+    .stat-icon {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .stats {
+      padding: 40px 15px;
+    }
+  
+    .stat-divider {
+      width: 50px;
+      height: 1px;
+    }
+  }
+  
